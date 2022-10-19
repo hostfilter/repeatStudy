@@ -5,12 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style scoped>
+    ol {
+      display: flex;
+      width: 100px;
+      justify-content: space-between;
+    }
+  </style>
 </head>
 <body>
   <div class="main">
     <p>dev分支创建</p>
+    <div class="new">
+      <ul>
+        <!-- <li></li> -->
+      </ul>
+    </div>
   </div>
   <script>
+    let obj=[{
+      name:'乔治',
+      age:18
+    },{
+      name:'晓雪',
+      age:12
+    },{
+      name:'雅婷',
+      age:9
+    }]
+    let ul =document.querySelector('ul');
+    for(let i=0;i<obj.length;i++){
+      let ol=document.createElement('ol');
+      ol.innerHTML=obj[i].name+obj[i].age+'岁'
+      ul.appendChild(ol)
+    }
     console.log('我是dev分支')
   </script>
 </body>
